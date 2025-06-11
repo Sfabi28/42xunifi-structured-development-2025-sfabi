@@ -1,7 +1,7 @@
 
 #include "critical_windows.h"
 
-static int case1(const int *readings, int size, int index)
+static int case1(const int *readings, int index)
 {
     int nbr = 0;
 
@@ -16,7 +16,7 @@ static int case1(const int *readings, int size, int index)
 }
 
 
-static int case2(const int *readings, int size, int index)
+static int case2(const int *readings, int index)
 {
     for (int i = index; i < index + 5; i++)
     {
@@ -28,7 +28,7 @@ static int case2(const int *readings, int size, int index)
     return 1;
 }
 
-static int case3(const int *readings, int size, int index)
+static int case3(const int *readings, int index)
 {
     int avarage = 0;
     for (int i = index; i < index + 5; i++)
@@ -46,7 +46,7 @@ int count_critical_windows(const int *readings, int size)
     int count = 0;
     
     for (int i = 0; i < size - 4; i++) {
-        if (case1(readings, size, i) && case2(readings, size, i) && case3(readings, size, i)) {
+        if (case1(readings, i) && case2(readings, i) && case3(readings, i)) {
             count++;
         }
     }
