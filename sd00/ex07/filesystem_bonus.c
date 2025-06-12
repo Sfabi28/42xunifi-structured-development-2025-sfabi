@@ -1,6 +1,6 @@
 #include "filesystem.h"
 
-int compute_total_size(FSNode *node)
+int compute_total_size(const FSNode *node)
 {
     if (node == NULL) {
         return 0;
@@ -17,7 +17,7 @@ int compute_total_size(FSNode *node)
     return total_size;
 }
 
-void free_filesystem(FSNode *node)
+void free_filesystem(const FSNode *node)
 {
     if (node == NULL) {
         return;

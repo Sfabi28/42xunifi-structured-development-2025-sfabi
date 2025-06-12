@@ -5,7 +5,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-struct FSNode {
+typedef struct FSNode {
     char *name;
     int size;
     struct FSNode *parent;
