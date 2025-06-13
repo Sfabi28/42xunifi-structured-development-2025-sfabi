@@ -1,5 +1,8 @@
 #include "grade_map.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 static const char* standard_mapper(int score)
 {
     if (score >= 90)
@@ -54,4 +57,19 @@ void map_scores(const int *scores, int size, GradeMapper mapper, const char **ma
     for (int i = 0; i < size; i++) {
         mapped_grades[i] = mapper(scores[i]);
     }
+}
+
+int main() {
+    // Example usage
+    int scores[] = {99, 85, 75, 65, 55};
+    const int size = sizeof(scores) / sizeof(scores[0]);
+    const char *mapped_grades[size];
+
+    // Using standard mapper
+    map_scores(scores, size, plusminus_mapper, mapped_grades);
+    for (int i = 0; i < size; i++) {
+        printf("Score: %d, Grade: %s\n", scores[i], mapped_grades[i]);
+    }
+
+    return 0;
 }
