@@ -36,7 +36,7 @@ int check_character_type(const char *new_pw)
             has_lower = 1;
         else if (new_pw[i] >= '0' && new_pw[i] <= '9')
             has_digit = 1;
-        else
+        else if (new_pw[i] == '@' || new_pw[i] == '#' || new_pw[i] == '$' || new_pw[i] == '%' || new_pw[i] == '^' || new_pw[i] == '&' || new_pw[i] == '*')
             has_special = 1;
 
         i++;
