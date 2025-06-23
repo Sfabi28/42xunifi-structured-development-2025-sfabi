@@ -1,0 +1,5 @@
+1,John Doe,333-1234567,john.doe@email.com,New York,123 Main St
+2,Jane Smith,345-7654321,jane.smith@email.com,Los Angeles,456 Sunset Blvd
+3,Marco Rossi,+39 055 1234567,marco.rossi@email.it,Firenze,Via Roma 10
+4,Alice Brown,555-9876543,alice.brown@email.com,London,221B Baker Street
+5,Bob Lee,123-4567890,bob.lee@email.com,San Francisco,Apartment 5B
